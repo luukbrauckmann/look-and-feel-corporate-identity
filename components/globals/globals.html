@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="stylesheet" href="./globals.css">
+	<link rel="stylesheet" href="../../style.css">
+	<title>globals</title>
+</head>
+
+<body>
+	<header>
+		<h1>Globals</h1>
+	</header>
+	<main>
+		<article>
+			<header>
+				<h2>Globale elementen</h2>
+			</header>
+			<h3>Desktop header</h3>
+			<div>
+				<img src="./assets/CTC_Primary_Logo_White.png" alt="brand logo">
+				<div>
+					<span>Services</span>
+					<span>Updates</span>
+					<span>Over ons</span>
+					<span>Contact</span>
+					<button>Kom in contact &#62</button>
+					<button>NL <span class="move">&#8744</span></button>
+				</div>
+			</div>
+			<h4>Gebruik:</h4>
+			<span>Deze header wordt gebruikt als hoofdnavigatie van de desktop website van CTC. De koppen kunnen vervangen worden voor verschillende delen van de site.
+			Er moet gebruik gemaakt worden van media breakpoints om de header responsive in te zetten. De knoppen verwijzen naar de contact pagina en een functie om de taal van de weergeven content te veranderen.</span>
+			<p>HTML code voorbeeld:</p>
+			<pre>
+				<code>
+					&lt;header&gt;
+						&lt;img src="./assets/CTC_Primary_Logo_White.png" alt="brand logo"&gt;
+						&lt;nav&gt;
+							&lt;span&gt;Services&lt;/span&gt;
+							&lt;span&gt;Updates&lt;/span&gt;
+							&lt;span&gt;Over ons&lt;/span&gt;
+							&lt;span&gt;Contact&lt;/span&gt;
+							&lt;button&gt;Kom in contact &#62&lt;/button&gt;
+							&lt;button&gt;NL &lt;span class="move">&#8744&lt;/span&gt;&lt;/button&gt;
+						&lt;/nav&gt;
+					&lt;/header&gt;
+				</code>
+			</pre>
+			<p>CSS code voorbeeld: </p>
+			<pre>
+				<code>
+					header{
+						padding: 1.3em;
+						background-color: #524dd0;
+						padding-top: 2em;
+						font-family: 'Rajdhani', sans-serif;
+						color: white;
+						display: flex;
+						flex-flow: row nowrap;
+						justify-content: flex-end;
+						font-size: 18px;
+					}
+					
+					header > img{
+						max-width: 9em;
+						margin-right: auto;
+						margin-left: 3.5em;
+					}
+					
+					
+					header > div > span{
+						margin-right: 4em;
+					}
+					
+					header > div > span:hover{
+						color: black;
+						transition: .3s ease;
+					}
+					
+					header > div > button:nth-of-type(1){
+						font-family: 'Rajdhani', sans-serif;
+						font-size: 18px;
+						color: black;
+						background-color: #00ffec;
+						border: none;
+						padding: .75em 2.5em .75em 2.5em;
+						border-radius: .5em;
+					}
+					
+					header > div > button:nth-of-type(1):hover{
+						background-color: white;
+						transition: .3s ease;
+					}
+					
+					header > div > button:nth-of-type(2){
+						padding: 1em;
+						color: white;
+						background-color: #524dd0;
+						border: solid white 1px;
+						border-radius: .25em;
+						margin-left: .2em;
+					}
+					
+					header > div > button:nth-of-type(2):hover{
+						background-color: #242e73;
+					}
+					
+					.move{
+						margin-left: 1em;
+					}
+				</code>
+			</pre>
+			<h3>Mobiele Header</h3>
+			<div>
+				<img src="./assets/CTC_Primary_Logo_White.png" alt="brand logo">
+			</div>
+			<h4>Gebruik:</h4>
+			<span>Deze header wordt gebruikt als mobiele header en heeft geen informatie buiten het logo om. Dit is de header die automatisch aangenomen wordt onder een bepaalde schermgrootte.</span>
+			<p>HTML code voorbeeld:</p>
+			<pre>
+				<code>
+					&lt;header&gt;
+						&lt;img src="./assets/CTC_Primary_Logo_White.png" alt="brand logo"&gt;
+					&lt;/header&gt;
+				</code>
+			</pre>
+			<p>CSS code voorbeeld: </p>
+			<pre>
+				<code>
+					header{
+						padding: 1.3em;
+						background-color: #524dd0;
+						padding-top: 2em;
+						display: flex;
+						font-size: 18px;
+						max-width: 40em;
+					}
+					
+					header > img{
+						max-width: 9em;
+						margin-right: auto;
+						margin-left: 3em;
+					}
+				</code>
+			</pre>
+			<h3>Desktop Footer</h3>
+			<div>
+				<img src="./assets/CTC_Primary_Logo_White.png" alt="brand logo">
+				<div>
+					<span><a href="">Services</a></span>
+					<span><a href="">Over ons</a></span>
+					<span><a href="">Contact</a></span>
+				</div>
+				<div>
+					<img src="./assets/Logo White RGB.webp" alt="brand logo">
+					<img src="./assets/Logo FMN white.webp" alt="brand logo">
+				</div>
+				<button>Kom in contact &#62</button>
+			</div>
+			<h4>Gebruik: </h4>
+			<span>De footer wordt op desktop pagina's ingezet als globaal element dat belangrijke informatie bevat over het bedrijf en hoe je hier contact mee kan opnemen. Veel van de informatie staat ook in de header met uitzondering van de verschillende partner
+				foto's die bepaalde connecties weergeven.
+			</span>
+			<p>HTML code voorbeeld: </p>
+			<pre>
+				<code>
+					&lt;footer&gt;
+						&lt;img src="./assets/CTC_Primary_Logo_White.png" alt="brand logo"&gt;
+						&lt;div&gt;
+							&lt;span&gt;&lt;a href=""&gt;Services&lt;/a&gt;&lt;/span&gt;
+							&lt;span&gt;&lt;a href=""&gt;Over ons&lt;/a&gt;&lt;/span&gt;
+							&lt;span&gt;&lt;a href=""&gt;Contact&lt;/a&gt;&lt;/span&gt;
+						&lt;/div&gt;
+						&lt;div&gt;
+							&lt;img src="./assets/Logo White RGB.webp" alt="brand logo"&gt;
+							&lt;img src="./assets/Logo FMN white.webp" alt="brand logo"&gt;
+						&lt;/div&gt;
+						&lt;button>Kom in contact &#62&lt;/button&gt;
+					&lt;/footer&gt;
+				</code>
+			</pre>
+			<p>CSS code voorbeeld: </p>
+			<pre>
+				<code>
+					footer{
+						padding-bottom: 8em;
+						background-color: #09102E;
+						padding-top: 2em;
+						display: flex;
+						flex-flow: row nowrap;
+						color: white;
+					}
+					
+					footer > img{
+						max-width: 7em;
+						height: 2.5em;
+						margin-right: auto;
+						margin-left: 3em;
+					}
+					
+					footer > div{
+						display: flex;
+						flex-flow: column nowrap;
+						margin-right: 5em;
+						font-family: 'Rajdhani', sans-serif;
+					
+					}
+					
+					footer > div > span{
+						margin-bottom: 1em;
+					}
+					
+					footer > div > span > a:visited{
+						color: white;
+					}
+					
+					footer > div > img{
+						margin-bottom: 1em;
+					
+					}
+					
+					footer > button{
+						font-family: 'Rajdhani', sans-serif;
+						font-size: 18px;
+						color: black;
+						background-color: #00ffec;
+						border: none;
+						padding: .75em 1.5em .75em 1.5em;
+						border-radius: .3em;
+						height: 2.7em;
+						margin-right: 3em;
+					}
+					
+					footer > button:hover{
+						background-color: white;
+						transition: .3s ease;
+					}	
+				</code>
+			</pre>
+			<h3>Mobiele Footer</h3>
+			<div>
+				<img src="./assets/CTC_Primary_Logo_White.png" alt="brand logo">
+			</div>
+			<h4>Gebruik: </h4>
+			<span>De footer wordt ingezet bij een bepaalde schermgrootte en bevat wederom geen informatie behalve het CTC logo. De footer bevindt zich altijd aan de onderkant van de pagina.De informatie uit de footer staat nu in de content van de main pagina.</span>
+			<p>HTML code gebruik: </p>
+			<pre>
+				<code>
+					&lt;footer&gt;
+						&lt;img src="./assets/CTC_Primary_Logo_White.png" alt="brand logo"&gt;
+					&lt;/footer&gt;
+				</code>
+			</pre>
+			<p>CSS code gebruik: </p>
+			<pre>
+				<code>
+					footer{
+						max-width: 40em;
+						padding-bottom: 3em;
+						background-color: #09102E;
+						padding-top: 2em;
+						display: flex;
+						flex-flow: row nowrap;
+						color: white;
+						justify-content: center;
+					}
+					
+					footer > img{
+						max-width: 7em;
+					}
+				</code>
+			</pre>
+		</article>
+	</main>
+</body>
+
+</html>

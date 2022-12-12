@@ -1,0 +1,31 @@
+.flex {
+	display: flex;
+}
+
+.w-full {
+	width: 100%;
+}
+
+img {
+	width: 100%;
+}
+
+#primary-logos div {
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+}
+
+#secondary-logos div {
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+}
+
+.mb-1 {
+	margin-bottom: .5rem;
+}
+
+.img-fit {
+	height: 150px;
+    max-width: auto;
+    object-fit: cover;
+}

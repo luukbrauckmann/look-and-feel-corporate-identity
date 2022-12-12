@@ -1,0 +1,267 @@
+@import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap');
+
+:root {
+	--spacing: 1rem;
+
+	--heading-font: 'Rajdhani', Courier, monospace;
+	--regualar-font: 'Roboto', san-serif;
+
+	--primary-color: #524dd0;
+	--accent-color: #00ffec;
+
+	/* Custom properties */
+	--blue: #5052c9;
+	--green: #00ffec;
+	--purple: #833ab4;
+	--white: #fff;
+	--black: #000;
+	--gradient: linear-gradient(90deg, rgba(80,82,194,1) 0%, rgba(131,58,180,1) 100%);
+
+	--device-sm: 600px;
+	--device-md: 768px;
+	--device-lg: 992px;
+	--device-xl: 1200px;
+}
+
+button {
+	padding: 1em 3em 1em 3em;
+	border-radius: 5px;
+	border: none;
+	background-color: var(--white);
+	font-family: 'Rajdhani', sans-serif;
+	font-size: 14px;
+	font-weight: 600;
+	transition: .2s;
+}
+
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+html {
+	height: 100%;
+	font-size: 16px;
+}
+
+body {
+	font-family: var(--regualar-font);
+}
+
+body,
+section {
+	display: flex;
+	flex-flow: column;
+	height: 100%;
+}
+
+body > header,
+body > footer,
+section > header,
+section > footer {
+	flex: 0 1 auto;
+}
+
+body > main,
+section > div {
+	flex: 1 1 auto;
+}
+
+h1, h2, h3, h4, h5, h6 {
+	font-family: var(--heading-font);
+}
+
+section > header {
+	border-bottom: 1px solid grey;
+	padding-bottom: var(--spacing);
+	margin-bottom: var(--spacing);
+}
+
+section > header > h1 {
+	font-size: 2em;
+}
+
+article {
+	margin-bottom: var(--spacing);
+}
+article > header {
+	margin-bottom: calc(var(--spacing) / 2);
+}
+
+pre {
+	padding: var(--spacing);
+	border: 1px solid grey;
+	border-radius: 5px;
+	background-color: #eee;
+	overflow-x: auto;
+}
+
+#root-header {
+	padding: var(--spacing);
+	background-color: var(--primary-color);
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	gap: var(--spacing);
+	box-shadow: 0 0 5px rgba(0, 0, 0, 0.5),0 0 5px rgba(0,0,0,.5);
+	z-index: 1;
+}
+
+#root-header > a > img {
+	height: 31px;
+}
+
+#root-main {
+	position: relative;
+	display: flex;
+	flex-direction: row;
+	overflow: hidden;
+}
+
+#main-content {
+	padding: var(--spacing);
+	flex: 1;
+}
+
+#main-nav-items {
+	display: flex;
+	flex-direction: column;
+}
+
+#main-nav-items > a {
+	padding: var(--spacing);
+	text-decoration: none;
+	font-family: 'rajdhani';
+	font-size: 1.3em;
+	color: black;
+	transition: .2s ease-in;
+}
+
+#main-nav-items > a.active {
+	font-weight: bold;
+}
+
+#main-nav-items > a:hover {
+	background-color: lightgrey;
+	transition: .2s ease-out;
+}
+
+.grid {
+	display: grid;
+	grid-template-columns: 1fr;
+	gap: var(--spacing);
+}
+
+#main-nav {
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	background: transparent;
+	transition: background .2s ease-out, left 0s ease-out .2s;
+	left: -100%;
+}
+
+#main-nav > #main-nav-items {
+	position: absolute;
+	background: white;
+	height: 100%;
+	width: 275px;
+	left: -100%;
+	transition: left .2s ease-out;
+	overflow-y: auto;
+	overflow-x: hidden;
+}
+
+#main-content {
+	overflow-y: auto;
+	overflow-x: hidden;
+}
+
+#main-nav.visible,
+#main-nav.visible > #main-nav-items {
+	left: 0;
+}
+
+#main-nav.visible {
+	background-color: rgba(0, 0, 0, 0.5);
+	transition: background .2s ease-in, left 0s ease-in 0s;
+}
+
+#main-nav.visible > #main-nav-items {
+	transition: left .2s ease-in;
+}
+
+::-webkit-scrollbar {
+	display: none;
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: #eee;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--primary-color);
+}
+::-webkit-scrollbar-thumb:hover {
+  opacity: .3;
+}
+
+.white-btn {
+	background-color: var(--white);
+	color: var(--blue);
+}
+
+.white-btn:hover {
+	background-color: var(--blue);
+	color: var(--white);
+	box-shadow: inset 0 0 0 3px var(--white);
+}
+
+@media only screen and (min-width: 992px) {
+	::-webkit-scrollbar {
+		display: initial;
+	}
+
+	.grid {
+		grid-template-columns: 4fr 2fr;
+	}
+
+	#root-header > a > img {
+		content: url('./assets/CTC_Primary_Logo_White.png');
+		height: 45px;
+	}
+	#root-header > button {
+		display: none;
+	}
+
+	#main-nav,
+	#main-nav > #main-nav-items {
+		position: initial;
+		width: 275px;
+	}
+}
+
+.colors {
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	gap: .5rem;
+}
+
+.colors__item {
+	flex: 1;
+	background: #F1F2F4;
+	border-radius: 5px;
+	overflow: hidden;
+	box-shadow: 0px 3px 5px rgba(0, 0, 0, 0.02), 0px 0px 2px rgba(0, 0, 0, 0.05), 0px 1px 4px rgba(0, 0, 0, 0.08);
+}
+
+.colors__item > h3 {
+	padding: .5rem;
+}
+
+.colors__item > div {
+	height: 4rem;
+}

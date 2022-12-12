@@ -1,0 +1,103 @@
+:root {
+	--purple: #524dd0;
+	--blue: #00ffec;
+	--dark-blue: #42c0b1;
+	--black: #110f2a;
+	--white: #fff;
+	--gray: #f7f7f7;
+	--green: #2fe013;
+	--red: #e03813;
+	--light-purple: #84389e;
+	--border: solid 2px var(--black);
+	--padding: 1.5rem;
+	--border-radius: 0.5rem;
+}
+
+.main {
+	width: 80%;
+	margin-left: 10%;
+}
+
+.header-kleuren {
+	width: 100%;
+	margin-bottom: 2rem;
+	padding: var(--padding);
+}
+
+.big-container {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 5%;
+	padding: var(--padding);
+}
+
+.small-container {
+	width: 30%;
+}
+
+.kleur {
+	border: var(--border);
+	padding: 0.5rem 1rem;
+	border-radius: var(--border-radius);
+}
+
+.info {
+	padding: 0.5rem 1rem;
+	background-color: inherit;
+	margin-bottom: 1rem;
+}
+
+.purple {
+	background-color: var(--purple);
+	color: var(--white);
+}
+
+.gradient {
+	background: linear-gradient(
+		90deg,
+		var(--purple) 0%,
+		var(--light-purple) 100%
+	);
+	color: var(--white);
+}
+
+.blue {
+	background-color: var(--blue);
+}
+
+.dark-blue {
+	background-color: var(--dark-blue);
+}
+
+.red {
+	background-color: var(--red);
+}
+
+.green {
+	background-color: var(--green);
+}
+
+.black {
+	background-color: var(--black);
+	color: var(--white);
+}
+
+.gray {
+	background-color: var(--gray);
+}
+
+.white {
+	background-color: var(--white);
+}
+
+pre {
+	border: var(--border);
+	border-radius: 1rem;
+	background-color: var(--white);
+}
+
+@media (max-width: 450px) {
+	.small-container {
+		width: 100%;
+	}
+}

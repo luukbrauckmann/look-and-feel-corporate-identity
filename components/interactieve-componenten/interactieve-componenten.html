@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="stylesheet" href="./interactieve-componenten.css">
+	<link rel="stylesheet" href="./style.css">
+	<script src="./interactieve-componenten.js"></script>
+	<title>interactieve-componenten</title>
+</head>
+
+<body>
+	<header class="header-IC">
+		<h1>interactieve-componenten</h1>
+	</header>
+	<main>
+		<article>
+			<header class="header-IC">
+				<h2>Soorten interactieve-componenten</h2>
+				<hr />
+			</header>
+			<div class="container">
+				<div class="work-container">
+
+					<div class="slideshow-container">
+
+						<div class="mySlides fade" style="display: block;">
+							<img class="img"  src="./assets/Carousel-img-1.png" style="width:100%">
+						</div>
+
+						<div class="mySlides fade" style="display: none;">
+							<img class="img"  src="./assets/Carousel-img-2.png" style="width:100%">
+						</div>
+						<div class="dot-container">
+							<span class="dot" onclick="currentSlide(1)"></span>
+							<span class="dot" onclick="currentSlide(2)"></span>
+						</div>
+
+
+						<a class="prev" onclick="plusSlides(-1)">❮</a>
+						<a class="next" onclick="plusSlides(1)">❯</a>
+
+					</div>
+					<br>
+					<h3>Code</h3>
+					<br>
+
+					<h4>Foto 1</h4>
+					<pre class="pre-IC"><code class="code-IC">&lt;div class=&quot;mySlides fade&quot; style=&quot;display: block;&quot;&gt;
+&lt;img src=&quot;./assets/Carousel-img-1.png&quot; style=&quot;width:100%&quot;&gt;
+&lt;/div&gt;
+</code></pre>
+					<h4>Foto 2</h4>
+					<pre class="pre-IC"><code class="code-IC">&lt;div class=&quot;mySlides fade&quot; style=&quot;display: none;&quot;&gt;
+&lt;img src=&quot;./assets/Carousel-img-2.png&quot; style=&quot;width:100%&quot;&gt;
+&lt;/div&gt;
+</code></pre>
+					<h4>Foto bolletje</h4>
+					<pre class="pre-IC"><code class="code-IC">&lt;div style=&quot;text-align:center;&quot;&gt;
+&lt;span class=&quot;dot&quot; onclick=&quot;currentSlide(1)&quot;&gt;&lt;/span&gt;
+&lt;span class=&quot;dot&quot; onclick=&quot;currentSlide(2)&quot;&gt;&lt;/span&gt;
+&lt;/div&gt;
+</code></pre>
+					<h4>Pijlen Links en Recht</h4>
+
+					<pre class="pre-IC"><code class="code-IC">&lt;a class=&quot;prev&quot; onclick=&quot;plusSlides(-1)&quot;&gt;&lt;/a&gt;
+&lt;a class=&quot;next&quot; onclick=&quot;plusSlides(1)&quot;&gt;&lt;/a&gt;
+</code></pre>
+					<h4>CSS</h4>
+					<pre style="margin: 0; line-height: 125%"><code class="code-IC">.mySlides {display: none;}
+img {vertical-align: middle;}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+/* Next &amp; previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -22px;
+  font-size: 18px;
+  transition: 0.1s ease;
+}
+/* On hover, add a little bit see-through */
+.prev:hover, .next:hover {
+  opacity: 0.6;
+}
+
+/* Position the &quot;next button&quot; to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* The dots */
+.dot {
+  z-index: 99;
+  cursor: pointer;
+  height: 5px;
+  width: 5px;
+  margin: 0 2px;
+  background-color: black;
+  border-radius: 50%;
+  display:inline-block;
+  user-select:none;
+}
+.active {
+  background-color: transparent;
+  border: 1px solid black;
+}
+/* Fading animation */
+.fade {
+  background-color: #5052c9;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+img {
+  opacity: 0.41;
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+</code></pre>
+
+				</div>
+				<div class="text-container">
+					<h3>Omschrijving</h3>
+					<p class="p-IC">Het Carousel wordt weer gegeven met de kleuren en fotos van Coding The Curbs</p>
+					<p class="p-IC">Met ook zowel een kleine fade in als je naar de volgende slide zou gaan</p>
+					<hr />
+					<br />
+					<h3>Kleuren</h3>
+					<div class="flex-container">
+						<div class="flex-items">#5052c9</div>
+						<div class="flex-items">#000000</div>
+					</div>
+					<hr />
+					<br>
+					<h3>Foto's</h3>
+					<img class="img description-img" src="./img/foto-1.png" alt="Carousel Foto 1">
+					<img class="img description-img" src="./img/foto-2.png" alt="Carousel Foto 1">
+				</div>
+			</div>
+		</article>
+	</main>
+</body>
+
+</html>

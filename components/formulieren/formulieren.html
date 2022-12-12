@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="stylesheet" href="./formulieren.css">
+	<link rel="stylesheet" href="../../style.css">
+	<title>formulieren</title>
+</head>
+
+<body>
+	<header>
+		<h1>formulieren</h1>
+	</header>
+	<main>
+		<article>
+			<header>
+				<h2>Soorten input velden</h2>
+				<hr/>
+			</header>
+			<div class="container">
+				<div class="work-container">
+					
+					<div class="form-field">
+						<form class="ctc-form">
+							<input type="text" id="fname" name="fname" placeholder="Placeholder">
+							<input class="isEmpty" type="text" id="fname" name="fname" placeholder="Placeholder">
+							<textarea rows="3" placeholder="Type your message here..." required="" aria-required="true"></textarea>
+						</form>
+					</div>
+
+					<h3 class="margin-maker-top">Code</h3>
+
+					<h4>Klein input veld</h4>
+					<pre><code>&lt;input type="text" id="fname" name="fname" placeholder="Placeholder"&gt;</code></pre>
+					<h4>Error wanneer je een veld leeg laat</h4>
+					<pre><code>&lt;input class="isEmpty" type="text" id="fname" name="fname" placeholder="Placeholder"&gt;</code></pre>
+					<h4>Groot input veld</h4>
+					<pre><code>&lt;textarea rows="3" placeholder="Placeholder..." required="" aria-required="true"&gt;&lt;/textarea&gt;</code></pre>
+
+					<h4>CSS</h4>
+					<pre><code><!--			-->:root {
+<!--			-->	/* Custom properties */
+<!--			-->	--light-gray: #f7f7f7;
+<!--			-->	--gray: #c9c7c8;
+<!--			-->	--light-red: #fba5a4;
+<!--			-->	--red: red;
+<!--			-->	--white: #fff;
+						  
+<!--			-->	--small-spacing: .5em;
+<!--			-->	--normal-spacing: 1em;
+<!--			-->	--large-spacing: 2em;
+<!--			-->}
+						
+<!--			-->::placeholder { 
+<!--			-->	color: var(--gray);
+<!--			-->}
+
+<!--			-->.isEmpty::placeholder {
+<!--			-->	color: var(--red);
+<!--			-->}
+
+<!--			-->.form-field {
+<!--			-->	background-color: var(--light-gray);
+<!--			-->	padding: var(--large-spacing);
+<!--			-->}
+					
+<!--			-->.ctc-form {
+<!--			-->	width: 60%;
+<!--			-->	margin-left: 20%;
+<!--			-->}
+					
+<!--			-->input {
+<!--			-->	width: 100%;
+<!--			-->	padding: .6em;
+<!--			-->	border-radius: 5px;
+<!--			-->	border: none;
+<!--			-->	font-family: "Rajdhani";
+<!--			-->	font-size: 16px;
+<!--			-->	margin-bottom: var(--normal-spacing);
+<!--			-->}
+					
+<!--			-->textarea {
+<!--			-->	width: 100%;
+<!--			-->	padding: .7em;
+<!--			-->	border-radius: 5px;
+<!--			-->	border: none;
+<!--			-->	font-family: "Rajdhani";
+<!--			-->	font-size: 16px;
+<!--			-->	margin-bottom: var(--normal-spacing);
+<!--			-->	resize: none;
+<!--			-->}
+
+<!--			-->.isEmpty {
+<!--			-->	background-color: var(--light-red);
+<!--			-->	border: solid 2px var(--red);
+<!--			-->}</code></pre>
+				</div>
+				<div class="text-container">
+					<h3>Omschrijving</h3>
+					<p>De input velden liggen op een lichtgrijze achtergrond. De inputvelden zelf zijn wit met een iets donkere kleur grijs als tekst voor in de input velden.</p>
+					<hr/>
+					<h3 class="margin-maker-bot">Kleuren</h3>
+					<div class="flex-container">
+						<div class="flex-items">#f7f7f7</div>
+						<div class="flex-items">#c9c7c8</div>
+						<div class="flex-items">#ffffff</div>
+						<div class="flex-items">#fba5a4</div>
+					</div>
+					<hr/>
+					<h3 class="margin-maker-bot">Gedrag</h3>
+					<p>Wanneer je een input veld selecteert wordt de rand er omheen zwart zodat je goed ziet dat je kan gaan typen in het input veld.</p>
+					<p>Wanneer er een veld verplicht is om ingevuld te worden zal de kleur rood worden wanneer er niets wordt ingevuld</p>
+				</div>
+			</div>
+		</article>
+	</main>
+</body>
+
+</html>

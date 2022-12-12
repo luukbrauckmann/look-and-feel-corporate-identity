@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="stylesheet" href="./knoppen.css">
+	<link rel="stylesheet" href="../../style.css">
+	<title>knoppen</title>
+</head>
+
+<body>
+	<header>
+		<h1>knoppen</h1>
+	</header>
+	<main>
+		<article>
+			<header>
+				<h2>Soorten knoppen</h2>
+				<hr/>
+			</header>
+			<div class="container">
+				<div class="work-container">
+					<div class="button-box">
+						<button class="blue-btn">Kom in contact ›</button>
+					</div>
+					<div class="button-box">
+						<button class="green-btn">Kom in contact ›</button><br>
+					</div>
+					<div class="button-box">
+						<button class="gradient-btn">Kom in contact ›</button><br>
+					</div>
+					<div class="button-box blue-line">
+						<button class="white-btn">Kom in contact ›</button>
+					</div>
+					<div class="button-box">
+						<button class="submit-btn">Kom in contact ›</button>
+					</div>
+
+					<h3 class="margin-maker-top">Code</h3>
+
+					<h4>Blauwe knop</h4>
+					<pre><code>&lt;button class="blue-btn"&gt;&lt;/button&gt;</code></pre>
+					<h4>Groene knop</h4>
+					<pre><code>&lt;button class="green-btn"&gt;&lt;/button&gt;</code></pre>
+					<h4>Gradient knop</h4>
+					<pre><code>&lt;button class="gradient-btn"&gt;&lt;/button&gt;</code></pre>
+					<h4>Witte knop</h4>
+					<pre><code>&lt;button class="white-btn"&gt;&lt;/button&gt;</code></pre>
+					<h4>submit knop</h4>
+					<pre><code>&lt;button class="submit-btn"&gt;&lt;/button&gt;</code></pre>
+
+					<h4>CSS</h4>
+
+					<pre><code><!--			-->:root {
+<!--			-->	/* Custom properties */
+<!--			-->	--blue: #5052c9;
+<!--			-->	--green: #00ffec;
+<!--			-->	--purple: #833ab4;
+<!--			-->	--white: #fff;
+<!--			-->	--black: #000;
+<!--			-->	--gradient: linear-gradient(90deg, rgba(80,82,194,1) 0%, rgba(131,58,180,1) 100%);
+<!--			-->}
+
+<!--			-->button {
+<!--			-->	padding: 1em 3em 1em 3em;
+<!--			-->	border-radius: 5px;
+<!--			-->	border: none;
+<!--			-->	background-color: var(--white);
+<!--			-->	font-family: 'Rajdhani', sans-serif;
+<!--			-->	font-size: 14px;
+<!--			-->	font-weight: 600;
+<!--			-->	transition: .2s;
+<!--			-->}</code></pre>
+
+					<pre><code><!--			-->.blue-btn {
+<!--			-->	background-color: var(--blue);
+<!--			-->	color: var(--white);
+<!--			-->}
+					
+<!--			-->.blue-btn:hover {
+<!--			-->	background-color: var(--white);
+<!--			-->	color: #var(--blue);
+<!--			-->	box-shadow: inset 0 0 0 3px var(--blue);
+<!--			-->}
+					
+<!--			-->.green-btn {
+<!--			-->	background-color: var(--green);
+<!--			-->	color: var(--black);
+<!--			-->}
+					
+<!--			-->.green-btn:hover {
+<!--			-->	background-color: var(--white);
+<!--			-->	color: var(--blue);
+<!--			-->}
+
+<!--			-->.gradient-btn {
+<!--			-->	background: var(--gradient);
+<!--			--> color: var(--white);
+<!--			-->}
+
+<!--			-->.gradient-btn:hover {
+<!--			-->	background: linear-gradient(90deg, var(--white) 0%, var(--white) 100%);
+<!--			-->	color: var(--purple);
+<!--			-->	box-shadow: inset 0 0 0 3px var(--purple);
+<!--			-->}
+					
+<!--			-->.white-btn {
+<!--			-->	background-color: var(--white);
+<!--			-->	color: var(--blue);
+<!--			-->}
+					
+<!--			-->.white-btn:hover {
+<!--			-->	background-color: var(--blue);
+<!--			-->	color: var(--white);
+<!--			-->}
+
+<!--			-->.submit-btn {
+<!--			-->	background-color: var(--blue);
+<!--			-->	color: var(--white);
+<!--			-->	width: 100%;
+<!--			-->}
+
+<!--			-->.submit-btn:hover {
+<!--			-->	background-color: var(--green);
+<!--			-->	color: var(--blue);
+<!--			-->}</code></pre>
+				</div>
+				<div class="text-container">
+					<h3>Omschrijving</h3>
+					<p>De kleur van de knoppen worden weergegeven in de kleuren die zijn meegegeven door Coding the Curbs.</p>
+					<p>De blauwe knop is de meest gebruikte knop. Deze wordt gebruikt wanneer de achtergrond kleur van de pagina wit is. Wanneer de kleur van de achtergrond blauw is gebruiken we de witte versie van de knop.</p>
+					<p>De groene knop wordt alleen gebruikt in de header en in de footer.</p>
+					<p>De submit knop is de knop die je gebruikt wanneer je een formulier verzend. Deze knop is de volledige breedte van het formulier en daarom staat hij hier ook weergegeven met een breedte van 100%.</p>
+					<hr/>
+					<h3 class="margin-maker-bot">Kleuren</h3>
+					<div class="flex-container">
+						<div class="flex-items">#5052c9</div>
+						<div class="flex-items">#833ab4</div>
+						<div class="flex-items">#00ffec</div>
+						<div class="flex-items">#ffffff</div>
+					</div>
+					<hr/>
+					<h3 class="margin-maker-bot">Gedrag</h3>
+					<p>Wanneer je met de muis over een knop beweegt veranderd deze van kleur. De blauwe knop wordt wit met een blauwe rand en blauwe tekst. De groene knop wordt wit met blauwe tekst en de witte knop wordt blauw met witte tekst. De submit knop wordt groen met blauwe letters.</p>
+				</div>
+			</div>
+		</article>
+	</main>
+</body>
+
+</html>

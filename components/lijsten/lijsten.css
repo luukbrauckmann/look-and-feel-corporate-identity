@@ -1,0 +1,71 @@
+:root {
+  --color-blue: #524dd0;
+  --color-gray: #f5f5f5;
+  --color-green: #2fe013;
+  --color-red: #e03813;
+  --header-height: 4rem;
+}
+
+ul,
+ol {
+  margin: 1rem 2rem;
+}
+
+/* NESTED LISTS */
+ul ol,
+ul ul,
+ol ul,
+ol ol {
+  margin: 0.2rem 2rem 0.5rem;
+}
+
+.nav--list {
+  list-style-type: none;
+  white-space: nowrap;
+  background-color: rgba(228, 131, 131, 0.812);
+  padding: 2rem;
+}
+
+.nav--list button {
+  font-size: 14px;
+  background-color: var(--color-gray);
+  color: black;
+  width: 100%;
+  border: none;
+  text-align: left;
+  cursor: pointer;
+  padding: 2rem 2.6rem;
+  font-family: "Rajdhani", sans-serif;
+  font-size: 17px;
+}
+
+.nav--list button > span {
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 800;
+  padding-left: 14px;
+  margin-top: 3px;
+  position: relative;
+  display: block;
+}
+
+.nav--list button > span::before {
+  content: "";
+  height: 6px;
+  width: 6px;
+  background-color: var(--color-red);
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  border-radius: 50%;
+}
+
+.nav--list button > .available::before {
+  background-color: var(--color-green);
+}
+
+.nav--list > li:nth-of-type(even) button {
+  background: white;
+}

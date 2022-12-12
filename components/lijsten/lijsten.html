@@ -1,0 +1,107 @@
+<section>
+  <header>
+    <h1>Lijsten</h1>
+  </header>
+  <div class="grid">
+    <div>
+      <article>
+        <header>
+          <h2>Geordende Lijsten</h2>
+        </header>
+        <div>
+          <p>
+            Deze lijsten kunnen worden gebruikt voor het opsommen van
+            hierarchische onderdelen.
+          </p>
+          <p>
+            In de lijst kan nog een sub-lijst worden toegevoegd, deze hoeven
+            niet per sé geordened te zijn.
+          </p>
+          <ol>
+            <li>Item 1</li>
+            <li>Item 2</li>
+            <li>
+              Geordende Parent
+              <ol>
+                <li>Geordende Child</li>
+                <li>Geordende Child</li>
+              </ol>
+            </li>
+            <li>
+              On-geordende Parent
+              <ul>
+                <li>On-geordende Child</li>
+                <li>On-geordende Child</li>
+              </ul>
+            </li>
+          </ol>
+        </div>
+
+        <header>
+          <h2>On-geordende Lijsten</h2>
+        </header>
+        <div>
+          <p>
+            Deze lijsten kunnen worden gebruikt voor het opsommen van
+            niet-hierarchische onderdelen.
+          </p>
+          <p>
+            In de lijst kan nog een sub-lijst worden toegevoegd, deze hoeven
+            niet per sé on-geordened te zijn.
+          </p>
+          <ul>
+            <li>Item 1</li>
+            <li>Item 2</li>
+            <li>
+              Geordende Parent
+              <ol>
+                <li>Geordende Child</li>
+                <li>Geordende Child</li>
+              </ol>
+            </li>
+            <li>
+              On-geordende Parent
+              <ul>
+                <li>On-geordende Child</li>
+                <li>On-geordende Child</li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </article>
+      <article>
+        <header>
+          <h2>Overzicht van locaties</h2>
+        </header>
+        <div>
+          <p>
+            Deze lijst kan gebruikt worden als navigatie van de kaart. De
+            opsomming is per onderdeel klikbaar en werkt interactief samen met
+            de kaart.
+          </p>
+          <ul class="nav--list">
+            <li>
+              <button data-long="5.123620" data-lat="52.083010">
+                Twijnstraat 26, Utrecht
+                <span class="available">Beschikbaar</span>
+              </button>
+            </li>
+            <li>
+              <button data-long="5.123530" data-lat="52.083210">
+                Twijnstraat 22, Utrecht
+                <span>Bezet</span>
+              </button>
+            </li>
+          </ul>
+          <p>
+            <i>
+              Rode achtergrond hoort niet bij de stijl. Dit is om het
+              onderscheid tussen de witte en grijze achtergrondkleur duidelijk
+              te maken.
+            </i>
+          </p>
+        </div>
+      </article>
+    </div>
+  </div>
+</section>

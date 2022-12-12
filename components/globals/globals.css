@@ -1,0 +1,196 @@
+@import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@400&display=swap');
+
+:root{
+    --main-ctc-color: #524dd0;
+    --secondary-ctc-color: #00ffec;
+    --footer-color: #09102E;
+    --text-spacing: 1em;
+    --font-size: 18px;
+    --secondary-text-color: white;
+    --small-width: 40em;
+}
+
+article > h3{
+    margin-top: var(--text-spacing);
+}
+
+article > h4{
+    margin-top: var(--text-spacing);
+}
+
+article > div:nth-of-type(1){
+    padding: 1.3em;
+    background-color: var(--main-ctc-color);
+    padding-top: 2em;
+    font-family: 'Rajdhani', sans-serif;
+    color: var(--secondary-text-color);
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: flex-end;
+    font-size: var(--font-size);
+    container-type: inline-size;
+    container-name: header;
+}
+
+
+
+article > div:nth-of-type(1) > img{
+    max-width: 9em;
+    margin-right: auto;
+    margin-left: 3.5em;
+}
+
+
+article > div:nth-of-type(1) > div > span{
+    margin-right: 4em;
+}
+
+article > div:nth-of-type(1) > div > span:hover{
+    color: black;
+    transition: .3s ease;
+    cursor: pointer;
+}
+
+article > div:nth-of-type(1) > div > button:nth-of-type(1){
+    font-family: 'Rajdhani', sans-serif;
+    font-size: var(--font-size);
+    color: black;
+    background-color: var(--secondary-ctc-color);
+    border: none;
+    padding: .75em 2.5em .75em 2.5em;
+    border-radius: .5em;
+}
+
+article > div:nth-of-type(1) > div > button:nth-of-type(1):hover{
+    background-color: white;
+    transition: .3s ease;
+    cursor: pointer;
+}
+
+article > div:nth-of-type(1) > div > button:nth-of-type(2){
+    padding: 1em;
+    color: var(--secondary-text-color);
+    background-color: var(--main-ctc-color);
+    border: solid white 1px;
+    border-radius: .25em;
+    margin-left: .2em;
+}
+
+article > div:nth-of-type(1) > div > button:nth-of-type(2):hover{
+    background-color: #242e73;
+    cursor: pointer;
+}
+
+.move{
+    margin-left: 1em;
+}
+
+article > div:nth-of-type(2){
+    padding: 1.3em;
+    background-color: var(--main-ctc-color);
+    padding-top: 2em;
+    display: flex;
+    font-size: var(--font-size);
+    max-width: var(--small-width);
+}
+
+article > div:nth-of-type(2) > img{
+    max-width: 9em;
+    margin-right: auto;
+    margin-left: 3em;
+}
+
+article > div:nth-of-type(3){
+    padding-bottom: 8em;
+    background-color: var(--footer-color);
+    padding-top: 2em;
+    display: flex;
+    flex-flow: row nowrap;
+    color: var(--secondary-text-color);
+    container-type: inline-size;
+    container-name: footer;
+}
+
+article > div:nth-of-type(3) > img{
+    max-width: 7em;
+    height: 2.5em;
+    margin-right: auto;
+    margin-left: 3em;
+}
+
+article > div:nth-of-type(3) > div{
+    display: flex;
+    flex-flow: column nowrap;
+    margin-right: 5em;
+    font-family: 'Rajdhani', sans-serif;
+
+}
+
+article > div:nth-of-type(3) > div > span{
+    margin-bottom: var(--text-spacing);
+}
+
+article > div:nth-of-type(3) > div > span > a:visited{
+    color: var(--secondary-text-color);
+}
+
+article > div:nth-of-type(3) > div > img{
+    margin-bottom: var(--text-spacing);
+
+}
+
+article > div:nth-of-type(3) > button{
+    font-family: 'Rajdhani', sans-serif;
+    font-size: var(--font-size);
+    color: black;
+    background-color: var(--secondary-ctc-color);
+    border: none;
+    padding: .75em 1.5em .75em 1.5em;
+    border-radius: .3em;
+    height: 2.7em;
+    margin-right: 3em;
+}
+
+article >  div:nth-of-type(3) > button:hover{
+    background-color: white;
+    transition: .3s ease;
+    cursor: pointer;
+}
+
+article > div:nth-of-type(4){
+    max-width: var(--small-width);
+    padding-bottom: 3em;
+    background-color: var(--footer-color);
+    padding-top: 2em;
+    display: flex;
+    flex-flow: row nowrap;
+    color: var(--secondary-text-color);
+    justify-content: center;
+}
+
+article > div:nth-of-type(4) > img{
+    max-width: 7em;
+}
+
+article > p{
+    margin-top: var(--text-spacing);
+    font-weight: bold;
+}
+
+@container header (max-width: 1080px){
+    article > div:nth-of-type(1) > div > button:nth-of-type(2){
+        display: none;
+    }
+}
+
+@container header (max-width: 980px){
+    article > div:nth-of-type(1) > div > button:nth-of-type(1){
+        display: none;
+    }
+}
+
+@container footer (max-width: 580px){
+    article > div:nth-of-type(3) > button {
+        display: none;
+    }
+}

@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+		<link rel="stylesheet" href="./kleuren.css" />
+		<link rel="stylesheet" href="../../style.css" />
+		<title>Kleuren</title>
+	</head>
+
+	<body>
+		<header class="header-kleuren">
+			<h1>Kleuren</h1>
+		</header>
+		<main>
+			<article>
+				<header class="title">
+					<h2>De verschillende kleuren</h2>
+					<hr />
+				</header>
+				<div class="big-container">
+					<div class="small-container">
+						<div class="purple kleur">#524dd0</div>
+						<div class="info">
+							De paarse kleur is de kleur die het meest in de site
+							terugkomt voornamelijk als achtergrondkleur. Op
+							paars wordt met wit geschreven zodat de tekst
+							makelijk te lezen is.
+						</div>
+					</div>
+					<div class="small-container">
+						<div class="gradient kleur">#524dd0 -> #84389e</div>
+						<div class="info">
+							Dit is de gradient, het wordt gebruikt om informatie
+							te highlighten en om diepte te creeëren. Op de
+							gradient wordt met wit geschreven.
+						</div>
+					</div>
+					<div class="small-container">
+						<div class="blue kleur">#00ffec</div>
+						<div class="info">
+							De blauwe kleur is een kleur die er is om dingen te
+							laten opvallen, daarom wordt de kleur voornamelijk
+							gebruikt voor dingen zoals knoppen. Er wordt met
+							zwart op blauw geschreven.
+						</div>
+					</div>
+					<div class="small-container">
+						<div class="dark-blue kleur">#42c0b1</div>
+						<div class="info">
+							De turquoise kleur word ook gebruikt als accent
+							kleur, voor momenten dat de blauwe kleur al gebruikt
+							is of te donker is. Er wordt met zwart op
+							geschreven.
+						</div>
+					</div>
+					<div class="small-container">
+						<div class="red kleur">#e03813</div>
+						<div class="info">
+							De rode kleur wordt gebruikt om aan te geven dat
+							iets fout is of gaat, en om aan te geven dat iets
+							niet beschikbaar is. De kleur wordt alleen op kleine
+							dingen gebruikt.
+						</div>
+					</div>
+					<div class="small-container">
+						<div class="green kleur">#2fe013</div>
+						<div class="info">
+							De groene kleur wordt gebruikt om aan te geven dat
+							iets goed is of beschikbaar is. De kleur wordt
+							alleen voor kleine dingen gebruikt.
+						</div>
+					</div>
+					<div class="small-container">
+						<div class="black kleur">#e03813</div>
+						<div class="info">
+							Zwart wordt voor tekst en voor de footer gebruikt.
+							Er wordt met wit op de zwarte stukken geschreven.
+						</div>
+					</div>
+					<div class="small-container">
+						<div class="gray kleur">#f7f7f7</div>
+						<div class="info">
+							Grijs wordt als achtergrondkleur gebruikt en kan
+							voor iconen gebruikt worden. Er wordt met zwart op
+							grijs geschreven.
+						</div>
+					</div>
+					<div class="small-container">
+						<div class="white kleur">#fff</div>
+						<div class="info">
+							Wit wordt voor tekst en achtergrond gebruikt. Er
+							wordt met zwart op wit geschreven.
+						</div>
+					</div>
+				</div>
+				<div class="algmeen info">
+					Het is handig om kleuren in variabelen in de root te zetten.
+					Dan staan alle kleuren bij elkaar en zijn ze makelijk aan te
+					passen.
+					<br /><br />
+					Hieronder staat een voorbeeld van hoe je de kleuren in de
+					root kan zetten.
+				</div>
+
+				<pre>
+					<code>
+	:root {
+		--primary-color: #524dd0;
+		--accent-color: #00ffec;
+		--gray-bg: #f7f7f7;
+	}
+
+
+	main {
+		background: var(--primary-color);
+	}
+					</code>
+				</pre>
+			</article>
+		</main>
+	</body>
+</html>
